@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://atsgeng.github.io/ATsAPI/" />
-    <title>Redirecting...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATsGeng</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Jika tidak otomatis pindah, <a href="https://atsgeng.github.io/ATsAPI/">klik di sini</a>.</p>
+
+    <header>
+        <h1>ATSGENG</h1>
+        <p>Membangun Masa Depan dengan Teknologi dan Inovasi</p>
+    </header>
+
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Profil</a>
+        <a href="#">Akademik</a>
+        <a href="https://github.com/ATsGeng">GitHub Kami</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Selamat Datang di Portal Resmi</h2>
+        <p>Inovasi pendidikan berbasis data real-time.</p>
+    </section>
+
+    <div class="container">
+        <h3>Visi & Misi</h3>
+        <p>Menjadi institusi pendidikan digital terdepan yang mengedepankan keterbukaan informasi.</p>
+        
+        <div class="api-section">
+            <h4>Papan Pengumuman Digital (API Feed)</h4>
+            <div id="data-sekolah">Sedang mengambil data terbaru...</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 1949 ATsGeng | Powered by CrootJS & GitHub API</p>
+    </footer>
+
+    <script type="module">
+        import api from "https://cdn.jsdelivr.net/gh/crootjs/lib@0.0.3/api.js";
+        const url = "https://api.github.com/orgs/atsgeng";
+        
+        // Memasukkan data API ke div #data-sekolah
+        api.get(url, "data-sekolah");
+    </script>
+
 </body>
 </html>
