@@ -1,52 +1,115 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATsGeng</title>
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATsGeng</title>
+
+  <link rel="icon" type="image/svg+xml" href="https://atsgeng.github.io/logo.svg">
+  
+  <link href="style.css" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
 
-    <header>
-        <h1>ATSGENG</h1>
-        <p>Membangun Masa Depan dengan Teknologi dan Inovasi</p>
-    </header>
+  <nav class="navbar shadow-sm">
+    <div class="nav-container p-2">
+      <a class="nav-brand" href="#">
+        <div class="lh-sm">
+          <span class="d-block">Portal Digital</span>
+          <strong>ATSGENG</strong>
+        </div>
+      </a>
 
-    <nav>
+      <div class="nav-menu">
         <a href="#">Beranda</a>
         <a href="#">Profil</a>
         <a href="#">Akademik</a>
-        <a href="https://github.com/ATsGeng">GitHub Kami</a>
-    </nav>
-
-    <section class="hero">
-        <h2>Selamat Datang di Portal Resmi</h2>
-        <p>Inovasi pendidikan berbasis data real-time.</p>
-    </section>
-
-    <div class="container">
-        <h3>Visi & Misi</h3>
-        <p>Menjadi institusi pendidikan digital terdepan yang mengedepankan keterbukaan informasi.</p>
-        
-        <div class="api-section">
-            <h4>Papan Pengumuman Digital (API Feed)</h4>
-            <div id="data-sekolah">Sedang mengambil data terbaru...</div>
-        </div>
+        <a href="https://atsgeng.github.io/ATsAPI/" class="btn-nav">Dashboard API</a>
+      </div>
     </div>
+  </nav>
 
-    <footer>
-        <p>&copy; 1949 ATsGeng | Powered by CrootJS & GitHub API</p>
-    </footer>
+  <div class="landing">
+    <div class="content-landing container">
+      <div class="text-center" data-aos="zoom-in">
+        <span class="badge-premium mb-4">
+          <span class="material-symbols-outlined fs-6">campaign</span>
+          Inovasi Teknologi 2026/2027
+        </span>
+        <h1 class="display-3 mb-4">Wujudkan Masa Depan <br><span class="text-success">Bersama ATsGeng</span></h1>
+        <p class="mb-5 text-muted mx-auto" style="max-width: 700px; font-size: 1.25rem;">
+          Membangun masa depan dengan teknologi dan inovasi pendidikan berbasis data real-time.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a class="btn btn-success" href="#pengumuman">
+            Lihat Pengumuman
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+          <a class="btn btn-outline-success" href="https://github.com/ATsGeng">
+            GitHub Kami
+            <span class="material-symbols-outlined">code</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script type="module">
-        import api from "https://cdn.jsdelivr.net/gh/crootjs/lib@0.0.3/api.js";
-        const url = "https://api.github.com/orgs/atsgeng";
-        
-        // Memasukkan data API ke div #data-sekolah
-        api.get(url, "data-sekolah");
-    </script>
+  <section id="pengumuman" class="section-padding">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-7" data-aos="fade-right">
+          <span class="text-success fw-bold text-uppercase mb-2 d-block" style="letter-spacing: 2px; font-size: 14px;">Data Real-time</span>
+          <h2 class="display-5 fw-bold mb-4">Papan Pengumuman <br><span class="text-success">Digital</span></h2>
+          
+          <div class="bg-white p-4 rounded-4 shadow-sm mb-4 border-success-custom">
+            <div id="data-sekolah" class="api-feed">Sedang mengambil data dari GitHub API...</div>
+          </div>
+
+          <p class="text-muted">Data di atas diambil langsung dari organisasi GitHub ATsGeng menggunakan integrasi CrootJS.</p>
+        </div>
+
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="card-premium p-4 shadow-lg">
+            <h4 class="fw-bold mb-4 text-center">Visi Strategis</h4>
+            <div class="vstack gap-3">
+              <div class="step-card-mini">
+                <span class="material-symbols-outlined text-success">verified</span>
+                <div>
+                  <h6 class="fw-bold mb-0">Transparansi Data</h6>
+                  <p class="small text-muted mb-0">Informasi publik yang mudah diakses.</p>
+                </div>
+              </div>
+              <div class="step-card-mini">
+                <span class="material-symbols-outlined text-success">speed</span>
+                <div>
+                  <h6 class="fw-bold mb-0">Teknologi Terkini</h6>
+                  <p class="small text-muted mb-0">Menggunakan ES6 Modules & CrootJS.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container text-center">
+      <div class="footer-bottom">
+        <p>© 1949 - 2026 <strong>ATsGeng</strong>. Powered by CrootJS & GitHub API.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="module" src="main.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 
 </body>
 </html>
