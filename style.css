@@ -1,97 +1,125 @@
+/* style.css - Tema STAI Sabilussalam Style */
+:root {
+    --primary-green: #15803d; /* Hijau Forest */
+    --accent-green: #22c55e;  /* Hijau Mint/Terang */
+    --light-bg: #f8fafc;
+    --text-dark: #1e293b;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #2d3436;
-    background-color: #f0f7f0; /* Hijau sangat muda untuk latar belakang */
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+    line-height: 1.6;
 }
 
 header {
-    background-color: #27ae60; /* Hijau Utama (Emerald) */
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-    border-bottom: 5px solid #2ecc71;
+    background: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 header h1 {
+    font-size: 1.2rem;
+    color: var(--primary-green);
     margin: 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-weight: 800;
 }
 
 nav {
-    background-color: #1e8449; /* Hijau Tua */
-    padding: 15px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: transparent;
+    padding: 10px;
 }
 
 nav a {
-    color: white;
-    margin: 0 20px;
+    color: var(--text-dark);
+    margin-left: 25px;
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+    font-weight: 500;
+    font-size: 0.95rem;
 }
 
 nav a:hover {
-    color: #a9dfbf; /* Hijau muda saat hover */
+    color: var(--primary-green);
 }
 
 .hero {
-    background-color: #ffffff;
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
+    background: white;
+    /* Pola ornamen halus seperti di gambar */
+    background-image: radial-gradient(#22c55e 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+    background-opacity: 0.1;
 }
 
 .hero h2 {
-    color: #27ae60;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
 }
+
+.hero h2 span {
+    color: var(--primary-green);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: var(--primary-green);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-green);
+    color: var(--primary-green);
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { background: #166534; }
 
 .container {
-    max-width: 900px;
-    margin: -40px auto 40px; /* Membuat kontainer agak naik ke area hero */
-    padding: 30px;
+    max-width: 1100px;
+    margin: -50px auto 50px;
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    position: relative;
-}
-
-.api-section {
-    background-color: #f9fdf9;
-    border: 1px solid #d5ead5;
-    border-left: 6px solid #27ae60;
-    padding: 25px;
-    margin-top: 30px;
-    border-radius: 4px;
-}
-
-.api-section h4 {
-    color: #1e8449;
-    margin-top: 0;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #2c3e50; /* Warna gelap agar kontras di bawah */
-    color: #ecf0f1;
-    margin-top: 60px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 #data-sekolah {
-    background: #ffffff;
-    padding: 15px;
-    border: 1px dashed #27ae60;
-    border-radius: 8px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9rem;
-    color: #27ae60;
-    white-space: pre-wrap;
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    font-family: 'monospace';
+    color: var(--primary-green);
 }
