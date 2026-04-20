@@ -1,76 +1,97 @@
-/* style.css - Tema Sekolah ATsGeng */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #2d3436;
+    background-color: #f0f7f0; /* Hijau sangat muda untuk latar belakang */
 }
 
 header {
-    background-color: #004a99;
+    background-color: #27ae60; /* Hijau Utama (Emerald) */
     color: white;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     text-align: center;
+    border-bottom: 5px solid #2ecc71;
+}
+
+header h1 {
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 nav {
-    background-color: #003366;
-    padding: 12px;
+    background-color: #1e8449; /* Hijau Tua */
+    padding: 15px;
     text-align: center;
     position: sticky;
     top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
+    margin: 0 20px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    color: #ffca28;
+    color: #a9dfbf; /* Hijau muda saat hover */
 }
 
 .hero {
     background-color: #ffffff;
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
-    border-bottom: 3px solid #004a99;
+}
+
+.hero h2 {
+    color: #27ae60;
+    font-size: 2.5rem;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 25px;
+    max-width: 900px;
+    margin: -40px auto 40px; /* Membuat kontainer agak naik ke area hero */
+    padding: 30px;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
 }
 
 .api-section {
-    background-color: #fff9e6;
-    border-left: 5px solid #ffca28;
-    padding: 20px;
+    background-color: #f9fdf9;
+    border: 1px solid #d5ead5;
+    border-left: 6px solid #27ae60;
+    padding: 25px;
     margin-top: 30px;
+    border-radius: 4px;
+}
+
+.api-section h4 {
+    color: #1e8449;
+    margin-top: 0;
 }
 
 footer {
     text-align: center;
-    padding: 25px;
-    background: #222;
-    color: #bbb;
-    margin-top: 50px;
+    padding: 30px;
+    background: #2c3e50; /* Warna gelap agar kontras di bawah */
+    color: #ecf0f1;
+    margin-top: 60px;
 }
 
 #data-sekolah {
-    background: #fdfdfd;
+    background: #ffffff;
     padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: monospace;
+    border: 1px dashed #27ae60;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: #27ae60;
     white-space: pre-wrap;
-    word-wrap: break-word;
 }
